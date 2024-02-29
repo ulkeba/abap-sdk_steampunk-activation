@@ -1,8 +1,10 @@
-# Enabling ABAP SDK for Azure on ABAP Cloud.
+# Enabling ABAP SDK for Azure on BTP ABAP environment.
 
-Due to the differences in the runtime environments of "full-blown" SAP S/4 HANA systems and SAP ABAP Cloud, it is currently not feasible to enable ABAP SDK for Azure on SAP Cloud's Steampunk environment. So far, we have identified the following challenges while trying to activate the SDK on ABAP Cloud.
+Due to the differences in the runtime environments of "full-blown" SAP S/4 HANA systems and BTP ABAP environment, it is currently not possible to activate the ABAP SDK for Azure on SAP Cloud's Steampunk environment. So far, we have identified the following challenges:
 
 :point_up: We did not manage to fully activate the SDK for code execution and dynamic testing. All insights are based on static checking done by ADT only.
+
+This doc's purpose is to serve as starting point for everyone in the community to contribute to the ABAP code upgrade to make the ABAP SDK compatible with the classic ABAP world and the new one.
 
 ## ADT seems to fail to determine the right activation order.
 
@@ -14,12 +16,14 @@ Observation
 - Note: "No active domain" error was showing up until tab was closed in ADT and re-opened.
 
 Conclusion
-- It seems that activating elements in the right order could resolve this issue. Is there potentially a glitch in the ADT when determining the activation order?
+- It seems that activating elements in the right order could resolve this issue.
 - Specific problems / errors do not seem to get refreshed "on the fly" but require a manual refresh of elements by closing and re-opening?
 
 ![](img/problem-tracking-Activation.png)
 
 ## Use of unpermitted Domains or Data Elements
+
+Lars maintains a list of types [here](https://abaplint.app/stats/microsoft/ABAP-SDK-for-Azure/void_types)
 
 ### Use of Domain `XFIELD` is not permitted.
 
