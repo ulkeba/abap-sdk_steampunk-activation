@@ -1,6 +1,6 @@
 # Enabling ABAP SDK for Azure on BTP ABAP environment.
 
-Due to the differences in the runtime environments of "full-blown" SAP S/4 HANA systems and BTP ABAP environment, it is currently not possible to activate the ABAP SDK for Azure on SAP Cloud's Steampunk environment. So far, we have identified the following challenges:
+Due to the differences in the runtime environments of SAP ECC or S/4 HANA systems compared to BTP ABAP environment, it is currently not possible to activate the ABAP SDK for Azure on SAP Cloud's Steampunk environment. So far, we have identified the following challenges:
 
 :point_up: We did not manage to fully activate the SDK for code execution and dynamic testing. All insights are based on static checking done by ADT only.
 
